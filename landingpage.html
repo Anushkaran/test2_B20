@@ -4,56 +4,346 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <title>My Website</title>
+    <title>Landing Page</title>
 </head>
+<style>
+    .name{
+        border:1px solid black;
+        padding:5px;
+        margin:5px;
+        width:150px;
+        text-align:start;
+        border-bottom:5px solid gray;
 
+
+    }
+    .dropdownlist{
+        position:absolute;
+        background-color: green;
+        top:30px;
+        /* display:none */
+        left:4px;
+        display:none;
+
+    }
+    .styleicon{
+        margin-right:10px;
+    }
+    .dropdown{
+        position:relative;
+        background-color:blue;
+        color:white;
+        text-align:center;
+        padding:4px;
+        width:105px;
+        display:flex
+
+
+    }
+    .stylecourses{
+        margin-left:5px;
+    }
+
+    .dropdown:hover  .dropdownlist {
+        display:block;
+    }
+    
+
+    .dropdown:hover {
+        background-color: green ;
+        color:black;
+    }
+    .name:hover{
+        background-color:yellow;
+        color:black
+    }
+    .navBar{
+        display:flex;
+        border:5px solid black;
+        padding:2px;
+        display:flex;
+       justify-content:space-between;
+       color:violet;
+        background-color: green;
+        text-align:center;
+        align-items:center;
+        position:fixed;
+        top:0;
+        width:98%;
+
+
+
+    }
+    .navItems{
+        display:flex;
+    }
+    .navSubItems{
+        padding:5px;
+        background-color: orange;
+        color:white;
+        text-align:center;
+        width:107px;
+    }
+    .header{
+        text-align: center;
+        border:2px solid rgb(104, 104, 179);
+        background-image: url(https://media.istockphoto.com/id/1376131442/photo/teacher-with-students-around-explaining-or-teaching-from-book-on-classroom-concept-of-support.jpg?s=1024x1024&w=is&k=20&c=xYOUWk-VA9r4-ceAJkeDUXO14UqURwmRc5_2PCvaRJc=);
+        height:300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+   
+     .productsection{
+        border:2px solid grey;
+        background-color:rgb(183, 127, 235);
+        height:250px;
+        display:flex;
+        margin-top:10px;
+     }
+     .servicesection{
+        border:2px solid rgb(219, 85, 85);
+        background:linear-gradient(to right,orange,yellow);
+        height:262px;
+        margin-top:10px;
+        display:flex;
+
+     }
+     .product{
+        border:2px dotted rgb(240, 57, 57);
+        width:18%;
+        margin:auto;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        border-bottom-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+
+     }
+     
+     .service{
+        border:2px solid rgb(3, 3, 48);
+        width:16%;
+        margin:auto;
+       
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 10%;
+        border-bottom-left-radius: 10%;
+
+
+     }
+     .productImage{
+       height:170px;
+       background-position:center;
+       background-size:cover;
+       background-repeat:no-repeat;
+       border-top-left-radius:5%;
+       border-bottom-right-radius: 5%;
+     }
+     .productimage1{
+       background-image:  url(https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+     }
+     .productimage2{
+        background-image: url(https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+     }
+     .productimage3{
+        background-image: url(https://media.istockphoto.com/id/1486662537/photo/c-programming-language-for-mobile-development-concept-smartphone-on-the-laptop-keyboard-the.jpg?s=1024x1024&w=is&k=20&c=P0_aCBYVynsOtB-Jamrs0zFddH7TIB3LfCW7EPW4_FA=)
+     }
+     .productimage4{
+       background-image:  url(https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+     }
+     .serviceImage{
+        height:170px;
+        background-position:center;
+       background-size:cover;
+       background-repeat:no-repeat;
+       border-top-right-radius:5%;
+       border-bottom-left-radius: 5%;
+     }
+    .productsummary{
+        text-align:center;
+        margin-top:1px;
+        color:greenyellow;
+        background-color: red;
+        font-style: italic;
+    }
+    .servicesummary{
+        text-align:center;
+        margin-top:1px;
+        color:white;
+        background-color: red;
+        font-style:oblique;
+    }
+
+    .servicegradient{
+        background:linear-gradient(to right,orange,yellow);
+    }
+    .serviceImage{
+        background-image: url(https://images.pexels.com/photos/518244/pexels-photo-518244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    }
+    .contactusform{
+        border:1px solid rgb(3, 49, 3);
+        margin:1% ;
+        width:99%;
+        height:380px;
+        background-image: url(https://images.pexels.com/photos/207456/pexels-photo-207456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+        
+    }
+    .formsection1,.formsection2{
+        display:flex;
+        justify-content:space-evenly;
+       
+        padding:5px;
+    }
+    .container{
+        background-color: sienna;
+    }
+
+    .footer{
+        background-color: blue;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size:20px;
+        gap:2%;
+        color: orange;
+       
+    }
+
+
+</style>
 <body>
-    <header class="navBar">
-        <div class="logo"><i class="fa-solid fa-laptop-code"></i> WebSchool</div>
-        <nav class="navItems">
-            <div class="navItem"><i class="fa-solid fa-house"></i> Home</div>
-            <div class="navItem dropdown">
-                <i class="fa-solid fa-info-circle"></i> Services
-                <div class="dropdownMenu">
-                    <div class="menuItem"><i class="fa-solid fa-code"></i> Web Dev</div>
-                    <div class="menuItem"><i class="fa-solid fa-paint-brush"></i> Design</div>
-                    <div class="menuItem"><i class="fa-solid fa-database"></i> Database</div>
-                </div>
+    <div class="container">
+     <div class="navBar">
+  
+    <div><i class="fa-solid fa-certificate styleicon"></i>LEARNLAB</div>
+ <div class="navItems">
+        <div class="navSubItems"><i class="fa-solid fa-house-chimney-user styleicon"></i>Home</div>
+        <div class="navSubItems dropdown"><i class="fa-regular fa-address-card styleicon"></i>About us<i class="fa-solid fa-angle-down stylecourses"></i>
+        
+            <div class="dropdownlist">
+              <div class="name"><i class="fa-brands fa-html5 styleicon"></i>Mission</div>
+              <div class="name"><i class="fa-brands fa-css3 styleicon"></i>Vision</div>
+              <div class="name"><i class="fa-brands fa-js styleicon"></i>Team</div>
             </div>
-            <div class="navItem"><i class="fa-solid fa-phone"></i> Contact</div>
-        </nav>
-    </header>
-
-    <section class="heroSection">
-        <h1>Welcome to WebSchool</h1>
-        <p>Learn Web Development from scratch.</p>
-    </section>
-
-    <section class="cards">
-        <div class="card">
-            <i class="fa-brands fa-html5"></i>
-            <h3>HTML</h3>
-            <p>Learn the structure of web pages.</p>
         </div>
-        <div class="card">
-            <i class="fa-brands fa-css3-alt"></i>
-            <h3>CSS</h3>
-            <p>Style and design beautiful websites.</p>
+    <div class="navSubItems dropdown"><i class="fa-solid fa-book styleicon"></i>Courses1<i class="fa-solid fa-caret-down stylecourses"></i>
+      <div class="dropdownlist">
+        <div class="name"><i class="fa-brands fa-html5 styleicon"></i>HTML</div>
+        <div class="name"><i class="fa-brands fa-css3 styleicon"></i>CSS</div>
+        <div class="name"><i class="fa-brands fa-js styleicon"></i>JS</div>
+      </div>
+    </div>
+    <div class="navSubItems dropdown"><i class="fa-solid fa-book styleicon"></i>Courses2<i class="fa-solid fa-caret-down stylecourses"></i>
+        <div class="dropdownlist">
+           <div class="name"><i class="fa-brands fa-html5 styleicon"></i>HTML</div>
+           <div class="name"><i class="fa-brands fa-css3 styleicon"></i>CSS</div>
+           <div class="name"><i class="fa-brands fa-js styleicon"></i>JS</div>
         </div>
-        <div class="card">
-            <i class="fa-brands fa-square-js"></i>
-            <h3>JavaScript</h3>
-            <p>Add interactivity to web pages.</p>
+    </div>
+        <div class="navSubItems dropdown"><i class="fa-solid fa-book styleicon"></i>Courses3<i class="fa-solid fa-caret-down stylecourses"></i>
+            <div class="dropdownlist">
+               <div class="name"><i class="fa-brands fa-html5 styleicon"></i>HTML</div>
+               <div class="name"><i class="fa-brands fa-css3 styleicon"></i>CSS</div>
+               <div class="name"><i class="fa-brands fa-js styleicon"></i>JS</div>
+            </div>
         </div>
-    </section>
+        <div class="navSubItems"><i class="fa-solid fa-blender-phone styleicon"></i>Contact Us</div>
+    </div>
+ </div>
+<div class="header">HAVE A WONDERFUL LEARNING</div>
+<div class="productsection">
+    <div class="product">
+        <div class="productImage productimage1"></div>
+        <div class="productsummary">Java</div>
+    </div>
+    <div class="product">
+        <div class="productImage productimage2"></div>
+        <div class="productsummary">Python</div>
+    </div>
+    <div class="product">
+        <div class="productImage productimage3"></div>
+        <div class="productsummary">c/c++</div>
+    </div>
+    <div class="product">
+        <div class="productImage productimage4"></div>
+        <div class="productsummary">SQL</div>
+    </div>
+    </div>
+<div class="servicesection servicegradient">
+    <div class="service">
+    <div class=" serviceImage"></div>
+        <div class="servicesummary">Interactive Coding courses</div>
+    </div>
+    <div class="service">
+    <div class=" serviceImage"></div>
+        <div class="servicesummary">Coding Challenges</div>
+    </div>
+    <div class="service">
+    <div class=" serviceImage"></div>
+        <div class="servicesummary">Career Support</div>
+    </div>
+    <div class="service">
+    <div class=" serviceImage"></div>
+        <div class="servicesummary">PAID COURSES</div>
+    </div>
+    <div class="service">
+    <div class=" serviceImage"></div>
+        <div class="servicesummary">BOOK A ENQUIRY</div>
+    </div>
+</div>
+<div class="contactusform">
+    <h2 style="text-align:center;"><b><u>Contact Us Form</u></b></h2>
+       <div class="formsection1">
+        <input type="text" name="fname" id="fname" value="" placeholder="Enter your Firstname">
+        <input type="text" name="lname" id="lname"value="" placeholder="Enter your Lastname">
+        <input type="number" name="mobilenumber"  value="" placeholder="Enter your Mobile Number">
+        <input type="email" name="email" id="email" value="" placeholder="Enter your Email">
 
-    <footer class="footer">
-        <p>© 2025 WebSchool | Follow us on: 
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-        </p>
-    </footer>
+
+       </div>
+
+       <div class="formsection2">
+        <div>
+        <div>
+        <input type="radio" id="gender" name="male" value="male"> 
+        <label for="gender">Male</label>
+        </div>
+        <div>
+        <input type="radio" id="gender" name="female" value="male"> 
+        <label for="gender">Female</label>
+    </div>
+    </div>
+       </div>
+       <div>
+        <textarea rows="10" cols="10" style="width:90%; margin:1%"></textarea>
+       </div>
+       <div style="text-align: center">
+        <input type="submit" value="Submit">
+    </div>
+    
+
+</div>
+
+<div class="footer">
+
+    <div>Designed By <b><u>Anushkaran V</u></b></div>
+    <div>
+    <i class="fa-brands fa-stack-overflow"></i> 
+    <i class="fa-brands fa-linkedin" style="color:#0077B5"></i>               
+    <i class="fa-solid fa-envelope"></i>
+    <i class="fa-brands fa-yahoo"></i>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram" style="color:blueviolet"></i>
+    <i class="fa-brands fa-youtube" style="color: red;"></i>
+</div>
+</div>
+
+
 </body>
 </html>
